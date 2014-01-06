@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/h"
+    android:orientation="vertical"
+    android:padding="3dip" >
+
+    <TableLayout
+        android:id="@+id/table1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:collapseColumns="2"
+        android:padding="3dip"
+        android:shrinkColumns="1"
+        android:stretchColumns="0" >
+
+        <TableRow>
+
+            <TextView
+                android:layout_height="192dip"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:maxLength="10"
+                android:textSize="14sp" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="我向行方向伸展，我可以很长    " />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="我向行方向伸展，我可以很长    " />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="我向行方向伸展，我可以很长    " />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
