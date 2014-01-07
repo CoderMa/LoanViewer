@@ -78,17 +78,17 @@
                 android:background="#FFFFFF" >
 
                 <TextView
-                    android:id="@+id/label"
+                    android:id="@+id/textViewClientID"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Client ID"
                     android:textSize="12sp" />
 
                 <EditText
-                    android:id="@+id/entry"
+                    android:id="@+id/editTextClientID"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/label"
+                    android:layout_below="@id/textViewClientID"
                     android:background="@drawable/edit_text_bg"
                     android:maxLength="16"
                     android:textSize="12sp" />
@@ -101,20 +101,22 @@
                 android:background="#FFFFFF" >
 
                 <TextView
-                    android:id="@+id/label"
+                    android:id="@+id/textViewUserID"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="User ID"
                     android:textSize="12sp" />
 
                 <EditText
-                    android:id="@+id/entry"
+                    android:id="@+id/editTextUserID"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/label"
+                    android:layout_below="@id/textViewUserID"
                     android:background="@drawable/edit_text_bg"
+                    android:inputType="text"
                     android:maxLength="16"
                     android:textSize="12sp" />
+
             </TableLayout>
 
             <TableLayout
@@ -124,20 +126,20 @@
                 android:background="#FFFFFF" >
 
                 <TextView
-                    android:id="@+id/label"
+                    android:id="@+id/textViewPassID"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Password"
                     android:textSize="12sp" />
 
                 <EditText
-                    android:id="@+id/entry"
+                    android:id="@+id/editTextPwdID"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/label"
+                    android:layout_below="@id/textViewPassID"
                     android:background="@drawable/edit_text_bg"
                     android:maxLength="16"
-                    android:password="true"
+                    android:inputType="textPassword"
                     android:textSize="12sp" />
             </TableLayout>
 
@@ -146,6 +148,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="19dp"
                 android:background="#FFFFFF" >
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remember me"
+                    android:textSize="12sp" />
+
             </TableLayout>
 
             <TableLayout
@@ -155,12 +165,14 @@
                 android:background="#FFFFFF" >
 
                 <ImageButton
-                    android:id="@+id/imageButton1"
+                    android:id="@+id/imageButton"
                     android:layout_width="10dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-82dp"
+                    android:layout_marginTop="10dp"
                     android:background="#00000000"
                     android:src="@drawable/b" />
+
             </TableLayout>
         </TableLayout>
     </LinearLayout>
