@@ -12,8 +12,10 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.conn.params.ConnManagerParams;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
 
 import android.annotation.SuppressLint;
@@ -178,12 +180,13 @@ public class MainActivity extends Activity {
 		String strReturn = null;
 		try {
 			HttpClient httpclient = new DefaultHttpClient();
-			HttpConnectionParams.setConnectionTimeout(httpclient.getParams(),
-					3000);
-			// HttpConnectionParams.setSoTimeout(httpclient.getParams(), 3000);
-			// // Set read data timeout
-			// ConnManagerParams.setTimeout(httpclient.getParams(), 3000); //
+			HttpParams httpParams = httpclient.getParams();
+
+			HttpConnectionParams.setConnectionTimeout(httpParams, 3000);
+			// Set read data timeout
+			HttpConnectionParams.setSoTimeout(httpParams, 3000);
 			// set pull connection from connection pool timeout
+			ConnManagerParams.setTimeout(httpParams, 3000);
 
 			HttpGet request = new HttpGet(urlString);
 
